@@ -45,53 +45,15 @@ def main():
             
     # Create the sidebar
     with st.sidebar:
-        st.title("Available Tables")
+        st.title("GenAI Chat Bot")
         
         # Add "Crawl Tables From Redshift" button
-        st.button("Crawl Tables From Redshift")
-        
-        # Add search box
-        st.text_input("Search tables...")
+        st.button("Cloud Kinetics - LRT")
         
         # Add "Crawled Tables (3)" header
-        st.subheader("Crawled Tables (3)")
+        st.subheader("A Generative AI Chat Bot for LRT Demo, Interacting with Redshift Database")
         
-        # Add example tables with schema and timestamp
-        tables = [
-            {
-                "name": "dm_sales",
-                "schema": "lrt_demo",
-                "last_crawled": "2024-12-19 10:30:00"
-            },
-            {
-                "name": "dm_incident_maintenance", 
-                "schema": "lrt_demo",
-                "last_crawled": "2024-12-19 09:45:00"
-            },
-            {
-                "name": "dm_route",
-                "schema": "lrt_demo", 
-                "last_crawled": "2024-12-19 08:15:00"
-            },
-            {
-                "name": "dm_route_performance_metrics",
-                "schema": "lrt_demo", 
-                "last_crawled": "2024-12-19 08:15:00"
-            },
-            {
-                "name": "dm_financial_performance_metrics",
-                "schema": "lrt_demo", 
-                "last_crawled": "2024-12-19 08:15:00"
-            }
-        ]
         
-        # Display tables
-        for table in tables:
-            with st.container():
-                st.markdown(f"**{table['name']}**")
-                st.markdown(f"Schema: {table['schema']}")
-                st.markdown(f"Last crawled: {table['last_crawled']}")
-                st.markdown("---")
 
 if __name__ == "__main__":
     main()
